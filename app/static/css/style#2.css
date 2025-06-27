@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: bold;
+}
+
+:root {
+  --hue-neutral: 200px;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("Usign-Gradients-Featured-Image.webp");
+  color: rgb(12, 11, 11);
+}
+
+.container {
+  width: 400px;
+  max-width: 80%;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+  border-color: yellowgreen;
+  font-size: x-large;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border-color: grey;
+  background-color: rgb(193, 101, 235);
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: black;
+  font: xx-large;
+  font-size: bolder;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: white;
+  color: rgb(116, 19, 243);
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: white;
+  background-color: green;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+  background-color: red;
+}
+
+.start-btn,
+.exit-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
